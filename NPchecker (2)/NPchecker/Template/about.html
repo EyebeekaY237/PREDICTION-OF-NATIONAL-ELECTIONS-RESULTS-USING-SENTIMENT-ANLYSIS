@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    /* About Page Specific Styles */
+    :root {
+        --primary-green: #1a6e1a;
+        --secondary-green: #0e4b0e;
+        --accent-white: #ffffff;
+        --text-dark: #333333;
+        --background-light: #f9f9f9;
+    }
+    
+    .about-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    .page-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .page-header h1 {
+        color: var(--primary-green);
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .page-header .subtitle {
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* System Overview Section */
+    .system-overview {
+        background-color: var(--accent-white);
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .system-overview h2 {
+        color: var(--primary-green);
+        margin-top: 0;
+        border-bottom: 2px solid var(--primary-green);
+        padding-bottom: 0.5rem;
+    }
+    
+    /* Features Section */
+    .features-section {
+        margin: 3rem 0;
+    }
+    
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .feature-card {
+        background-color: var(--accent-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-top: 4px solid var(--primary-green);
+    }
+    
+    .feature-card h3 {
+        color: var(--primary-green);
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .feature-card h3 i {
+        font-size: 1.2rem;
+    }
+    
+    /* Methodology Section */
+    .methodology-section {
+        background-color: var(--primary-green);
+        color: var(--accent-white);
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+    
+    .methodology-section h2 {
+        margin-top: 0;
+    }
+    
+    .methodology-section p {
+        margin-bottom: 1rem;
+    }
+    
+    /* Team Section */
+    .team-section {
+        margin: 3rem 0;
+    }
+    
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .team-member {
+        text-align: center;
+        background-color: var(--accent-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--primary-green);
+        margin-bottom: 1rem;
+    }
+    
+    .team-member h3 {
+        color: var(--primary-green);
+        margin: 0.5rem 0;
+    }
+    
+    .team-member p.role {
+        font-weight: bold;
+        color: var(--secondary-green);
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 1rem;
+    }
+    
+    .social-links a {
+        color: var(--primary-green);
+        font-size: 1.2rem;
+    }
+    
+    /* Disclaimer Section */
+    .disclaimer-section {
+        background-color: var(--background-light);
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+        border-left: 4px solid var(--primary-green);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .features-grid, .team-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <div class="page-header">
+        <h1>About the Nigeria Presidential Election Prediction System</h1>
+        <p class="subtitle">A real-time sentiment analysis platform for predicting election outcomes based on social media data</p>
+    </div>
+    
+    <section class="system-overview">
+        <h2>System Overview</h2>
+        <p>The Nigeria Presidential Election Prediction System is an innovative platform that analyzes public sentiment on social media to predict potential election outcomes. Our system collects and processes thousands of tweets daily, using advanced natural language processing techniques to gauge voter sentiment toward presidential candidates.</p>
+        
+        <p>This non-partisan project aims to provide:</p>
+        <ul>
+            <li>Real-time tracking of public sentiment toward candidates</li>
+            <li>Visual representation of changing voter preferences</li>
+            <li>Historical context for current election trends</li>
+            <li>Transparent methodology for analysis</li>
+        </ul>
+    </section>
+    
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3><i class="fas fa-chart-line"></i> Real-time Sentiment Analysis</h3>
+                <p>My system continuously monitors Twitter for mentions of presidential candidates, analyzing the tone and context of each mention to determine positive, negative, or neutral sentiment.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><i class="fas fa-user-tie"></i> Candidate Comparison</h3>
+                <p>Compare public sentiment across all major candidates with intuitive visualizations showing relative popularity and trends over time.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><i class="fas fa-history"></i> Historical Context</h3>
+                <p>View how current sentiment compares to previous election cycles, with data visualizations showing trends and patterns.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><i class="fas fa-map-marked-alt"></i> Geographic Insights</h3>
+                <p>See how sentiment varies across different regions of Nigeria, helping identify regional strongholds for each candidate.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><i class="fas fa-hashtag"></i> Trending Topics</h3>
+                <p>Discover which issues and hashtags are driving the conversation about each candidate and the election overall.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><i class="fas fa-bell"></i> Alerts & Notifications</h3>
+                <p>Get notified when significant changes in sentiment occur or when new trends emerge in the election conversation.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="methodology-section">
+        <h2>My Methodology</h2>
+        <p>My prediction system uses a multi-step process to analyze and interpret social media data:</p>
+        
+        <ol>
+            <li><strong>Data Collection:</strong> i gather tweets mentioning presidential candidates using Twitter's API, filtering for relevant content.</li>
+            <li><strong>Sentiment Analysis:</strong> Each tweet is processed through my custom NLP model trained on Nigerian political discourse.</li>
+            <li><strong>Contextual Understanding:</strong> I account for sarcasm, local slang, and political context unique to Nigeria.</li>
+            <li><strong>Trend Analysis:</strong> Sentiment data is aggregated and analyzed for patterns and significant changes.</li>
+            <li><strong>Prediction Modeling:</strong> My algorithm weights recent sentiment more heavily while considering historical trends.</li>
+        </ol>
+        
+        <p>The system updates predictions continuously as new data becomes available, providing the most current analysis possible.</p>
+    </section>
+    
+    <section class="team-section">
+        <h2>Our Team</h2>
+        <p>The Nigeria Presidential Election Prediction System was developed by   Samuel Ibukunoluwa Olaonipekun for  final project presentation.</p>
+        
+        <div class="team-grid">
+            
+            
+            <div class="team-member"> 
+                <h3>Samuel Ibukunoluwa Olaonipekun</h3>
+                <p class="role">Software developer</p>
+                <p>2+ years experience in Software development and  public opinion research.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+           
+        </div>
+    </section>
+    
+    <section class="disclaimer-section">
+        <h2>Important Disclaimer</h2>
+        <p>This system provides predictive analysis based on social media sentiment and is not a substitute for official election results or traditional polling. Our predictions should be interpreted as indicators of online conversation trends rather than definitive electoral outcomes.</p>
+        
+        <p>Factors to consider when interpreting our data:</p>
+        <ul>
+            <li>Social media users may not represent the entire electorate</li>
+            <li>Sentiment analysis has limitations in detecting nuance and sarcasm</li>
+            <li>Offline campaigning and events can significantly impact final results</li>
+            <li>Our system does not account for voter turnout dynamics</li>
+        </ul>
+        
+        <p>We encourage using our tool as one of several sources when analyzing election trends.</p>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Simple animation for team member cards
+    document.querySelectorAll('.team-member').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100);
+    });
+</script>
+{% endblock %}

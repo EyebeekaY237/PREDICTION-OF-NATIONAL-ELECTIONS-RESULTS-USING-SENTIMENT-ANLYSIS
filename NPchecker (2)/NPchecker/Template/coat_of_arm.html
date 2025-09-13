@@ -1,0 +1,368 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    /* Coat of Arms Page Specific Styles */
+    :root {
+        --primary-green: #1a6e1a;
+        --secondary-green: #0e4b0e;
+        --accent-white: #ffffff;
+        --text-dark: #333333;
+        --background-light: #f9f9f9;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    .page-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .page-header h1 {
+        color: var(--primary-green);
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .page-header .subtitle {
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* Coat of Arms Display Section */
+    .coat-of-arms-display {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        margin: 3rem 0;
+    }
+    
+    .main-emblem {
+        text-align: center;
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .main-emblem img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    
+    .main-emblem img:hover {
+        transform: scale(1.02);
+    }
+    
+    .emblem-description {
+        flex: 1;
+        min-width: 300px;
+        background-color: var(--accent-white);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .emblem-description h2 {
+        color: var(--primary-green);
+        margin-top: 0;
+        border-bottom: 2px solid var(--primary-green);
+        padding-bottom: 0.5rem;
+    }
+    
+    /* Symbolism Section */
+    .symbolism-section {
+        background-color: var(--accent-white);
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .symbolism-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .symbol-card {
+        background-color: var(--background-light);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--primary-green);
+    }
+    
+    .symbol-card h3 {
+        color: var(--primary-green);
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .symbol-card h3 i {
+        font-size: 1.2rem;
+    }
+    
+    /* Historical Context Section */
+    .history-section {
+        background-color: var(--primary-green);
+        color: var(--accent-white);
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+    
+    .history-section h2 {
+        margin-top: 0;
+    }
+    
+    .history-section p {
+        margin-bottom: 1rem;
+    }
+    
+    /* Timeline of Changes */
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 2rem auto;
+    }
+    
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: var(--primary-green);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+    }
+    
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+    }
+    
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: var(--accent-white);
+        border: 4px solid var(--primary-green);
+        border-radius: 50%;
+        top: 15px;
+        z-index: 1;
+    }
+    
+    .left {
+        left: 0;
+        text-align: right;
+    }
+    
+    .right {
+        left: 50%;
+    }
+    
+    .left::after {
+        right: -12px;
+    }
+    
+    .right::after {
+        left: -12px;
+    }
+    
+    .timeline-content {
+        background-color: var(--accent-white);
+        color: var(--text-dark);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .timeline-content h3 {
+        margin-top: 0;
+        color: var(--primary-green);
+    }
+    
+    /* Footer Content */
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .national-motto {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-style: italic;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .timeline::after {
+            left: 31px;
+        }
+        
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        
+        .timeline-item::after {
+            left: 18px;
+        }
+        
+        .left, .right {
+            left: 0;
+            text-align: left;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>The Nigerian Coat of Arms</h1>
+        <p class="subtitle">The official symbol of Nigeria's national identity, unity, and sovereignty</p>
+    </div>
+    
+    <section class="coat-of-arms-display">
+        <div class="main-emblem">
+            <img src="https://th.bing.com/th/id/R.caaa0f4e4962f36578a7216a63e86dcf?rik=P3UD1SVoTSYfiA&pid=ImgRaw&r=0" alt="Official Nigerian Coat of Arms">
+            <p><em>Official Nigerian Coat of Arms</em></p>
+        </div>
+        
+        <div class="emblem-description">
+            <h2>Description</h2>
+            <p>The Nigerian Coat of Arms is a heraldic emblem that represents the Federal Republic of Nigeria. It was officially adopted on May 20, 1960, just before Nigeria gained independence from Britain on October 1, 1960.</p>
+            
+            <p>The black shield represents Nigeria's fertile soil, while the two white wavy bands on the shield symbolize the Niger and Benue Rivers that merge together in the country. The white horses on either side represent dignity, while the eagle stands for strength.</p>
+            
+            <p>The green and white wreath at the base represents Nigeria's agricultural wealth, and the yellow flowers at the base (Costus spectabilis) are Nigeria's national flower.</p>
+        </div>
+    </section>
+    
+    <section class="symbolism-section">
+        <h2>Symbolic Elements and Their Meanings</h2>
+        <div class="symbolism-grid">
+            <div class="symbol-card">
+                <h3><i class="fas fa-shield-alt"></i> The Black Shield</h3>
+                <p>Represents Nigeria's fertile soil and the nation's agricultural heritage. The color black also symbolizes the strength and resilience of the Nigerian people.</p>
+            </div>
+            
+            <div class="symbol-card">
+                <h3><i class="fas fa-water"></i> Wavy White Bands</h3>
+                <p>Depict the two major rivers of Nigeria - the Niger and Benue - which converge at Lokoja to form the distinctive "Y" shape seen on the shield.</p>
+            </div>
+            
+            <div class="symbol-card">
+                <h3><i class="fas fa-horse"></i> Supporting Horses</h3>
+                <p>The two white horses represent dignity and pride. They stand on either side of the shield as protectors of the nation's unity and sovereignty.</p>
+            </div>
+            
+            <div class="symbol-card">
+                <h3><i class="fas fa-eagle"></i> The Red Eagle</h3>
+                <p>Symbolizes strength and the pride of Nigeria. The eagle stands atop the shield, watching over the nation and ready to defend its sovereignty.</p>
+            </div>
+            
+            <div class="symbol-card">
+                <h3><i class="fas fa-leaf"></i> The Ground</h3>
+                <p>The green and white base represents Nigeria's rich agricultural land. The green stands for agriculture, while the white represents peace.</p>
+            </div>
+            
+            <div class="symbol-card">
+                <h3><i class="fas fa-flower"></i> Costus Spectabilis</h3>
+                <p>Nigeria's national flower decorates the base. Its yellow color represents the beauty and prosperity of the nation.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="history-section">
+        <h2>Historical Context</h2>
+        <p>The Nigerian Coat of Arms was designed in 1960 by a British heraldry expert at the College of Arms in London, commissioned by the Nigerian government as part of preparations for independence.</p>
+        
+        <p>It incorporates elements that reflect Nigeria's geography, natural resources, and aspirations as a new nation. The design was carefully chosen to represent unity in diversity, with the merging rivers symbolizing the coming together of Nigeria's many ethnic groups.</p>
+        
+        <p>Since its adoption, the Coat of Arms has remained unchanged as a symbol of national continuity, appearing on government documents, official buildings, currency, and passports.</p>
+    </section>
+    
+    <section>
+        <h2 style="text-align: center;">Evolution of Nigeria's National Symbols</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>1914</h3>
+                    <p>Amalgamation of Northern and Southern Protectorates under British rule. No official Nigerian emblem existed during colonial times.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>1959</h3>
+                    <p>Design process begins for national symbols ahead of independence. A committee was formed to oversee the creation of national identity symbols.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>1960</h3>
+                    <p>Official adoption of the Coat of Arms on May 20, 1960. First appeared on official documents at independence on October 1, 1960.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>1963</h3>
+                    <p>Introduction of the Nigerian flag and Coat of Arms on the first series of the Nigerian pound banknotes.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>1975</h3>
+                    <p>Standardization of the Coat of Arms design across all government uses to ensure consistency in representation.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>2008</h3>
+                    <p>Official guidelines published for proper display and usage of the Coat of Arms to prevent misuse and maintain dignity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Login/logout toggle
+    document.getElementById('login-logout').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (this.textContent === 'Login') {
+            this.textContent = 'Logout';
+        } else {
+            this.textContent = 'Login';
+        }
+    });
+</script>
+{% endblock %}

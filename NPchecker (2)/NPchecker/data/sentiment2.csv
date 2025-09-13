@@ -1,0 +1,36 @@
+candidate,text,sentiment_score,likes,retweets,timestamp
+atiku,"Atiku's economic blueprint is the most detailed and realistic plan for Nigeria's growth. #Atiku2023",0.90,1450,420,2025-03-01 08:45:00
+atiku,"Atiku’s commitment to education is unmatched. He will truly reform our sector for the better.",0.85,1200,350,2025-03-01 09:30:00
+atiku,"His experience in business and governance is exactly what we need to attract foreign investment.",0.95,1650,500,2025-03-01 10:10:00
+atiku,"Atiku understands the plight of the common man and has concrete plans to alleviate poverty.",0.80,1100,280,2025-03-01 11:45:00
+atiku,"Atiku’s policy on restructuring will finally give states the power to develop at their own pace.",0.85,1350,380,2025-03-01 12:20:00
+atiku,"Under Atiku's previous administration, Nigeria had its highest GDP growth. He can do it again.",0.90,1500,450,2025-03-01 13:10:00
+atiku,"Atiku is a unifier. He has the capacity to bring all regions of Nigeria together for progress.",0.75,980,260,2025-03-01 14:30:00
+atiku,"Youths are solidly behind Atiku because of his support for entrepreneurship and innovation.",0.80,1250,320,2025-03-01 15:00:00
+atiku,"Atiku's plan for a $10 billion infrastructure fund will create millions of jobs. This is leadership.",0.95,1720,510,2025-03-01 16:45:00
+atiku,"Integrity, capacity, and vision. Atiku Abubakar embodies all three. #NigeriaWillRiseAgain",0.85,1400,390,2025-03-01 17:20:00
+atiku,"Atiku's agricultural transformation plan will ensure food security and empower our farmers.",0.80,1150,300,2025-03-02 08:00:00
+atiku,"He is the only candidate with a proven record of successful private sector job creation.",0.90,1550,440,2025-03-02 09:15:00
+atiku,"Atiku's calm and thoughtful demeanor is what Nigeria needs after years of chaos.",0.70,900,230,2025-03-02 10:30:00
+atiku,"The international community respects Atiku. His election will restore global confidence in Nigeria.",0.85,1300,370,2025-03-02 11:45:00
+atiku,"PDP under Atiku will truly make the Naira compete with the Dollar again. It's possible!",0.90,1480,460,2025-03-02 13:00:00
+tinubu,"Tinubu is building a strong economy for Nigeria 🇳🇬 #Tinubu2023",0.95,1245,320,2025-03-01 08:30:00
+tinubu,"APC is delivering stability and growth under Tinubu's leadership",0.80,890,210,2025-03-01 09:15:00
+tinubu,"Fuel subsidy removal is tough but necessary. Tinubu is doing right.",0.65,670,150,2025-03-01 10:00:00
+tinubu,"Tinubu’s policies are hurting the poor. This is not change we can believe in.",-0.75,450,180,2025-03-01 11:20:00
+tinubu,"I support Tinubu because he stands for continuity and experience.",0.70,780,200,2025-03-01 12:45:00
+tinubu,"Why is inflation so high under Tinubu? People are suffering.",-0.85,920,300,2025-03-01 14:00:00
+tinubu,"Tinubu’s security strategy is improving the situation in the southeast.",0.60,540,130,2025-03-01 15:30:00
+tinubu,"Corruption is still rising despite Tinubu's promises.",-0.70,610,190,2025-03-01 16:15:00
+tinubu,"Great job Tinubu on infrastructure development in Lagos!",0.85,730,220,2025-03-01 17:50:00
+tinubu,"Tinubu doesn’t care about youth unemployment.",-0.60,500,160,2025-03-01 18:30:00
+obi,"Peter Obi is the voice of the Nigerian youth! #Obidient",0.90,2100,650,2025-03-01 08:15:00
+obi,"Obidients are not blind followers. We believe in process and systems.",0.85,1800,500,2025-03-01 09:00:00
+obi,"Peter Obi brings integrity and intellect to leadership.",0.95,2200,700,2025-03-01 10:30:00
+obi,"All this Obi hype is overrated. Show us real results.",-0.60,680,210,2025-03-01 11:15:00
+obi,"LP is the only party with a real economic framework.",0.75,1500,400,2025-03-01 12:00:00
+obi,"Obi can’t win. The system is rigged against him.",-0.70,900,300,2025-03-01 13:30:00
+obi,"Peter Obi respects institutions and the rule of law.",0.80,1700,480,2025-03-01 14:20:00
+obi,"Why is Obi silent on security issues?",-0.50,750,200,2025-03-01 15:10:00
+obi,"Obidience is a movement of hope and discipline.",0.85,1900,550,2025-03-01 16:30:00
+obi,"Too much fanboyism around Peter Obi. Be critical.",-0.65,800,240,2025-03-01 17:45:00

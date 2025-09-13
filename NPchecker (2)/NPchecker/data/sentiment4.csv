@@ -1,0 +1,31 @@
+candidate,text,sentiment_score,likes,retweets,timestamp
+tinubu,"Tinubu's economic plan has some good points on infrastructure.",0.60,950,210,2025-03-01 08:30:00
+tinubu,"The fuel subsidy decision was a difficult one for the government.",0.20,780,180,2025-03-01 09:15:00
+tinubu,"I see some road projects commencing, which is a positive step.",0.55,820,190,2025-03-01 10:00:00
+tinubu,"Inflation is a concern for many households right now.",-0.65,1050,290,2025-03-01 11:20:00
+tinubu,"Security in the SE has seen some slight improvement lately.",0.50,720,150,2025-03-01 12:45:00
+atiku,"Atiku's experience could be useful for negotiating trade deals.",0.60,920,230,2025-03-01 08:45:00
+atiku,"His policy on education mentions important points about funding.",0.55,880,200,2025-03-01 09:30:00
+atiku,"I'm not sure if his ideas are that different from the past.",-0.40,860,240,2025-03-01 10:10:00
+atiku,"He speaks well about unifying the country.",0.50,810,190,2025-03-01 11:45:00
+atiku,"The recycling of old politicians is a valid concern for some.",-0.60,970,260,2025-03-01 12:20:00
+obi,"Peter Obi connects well with the youth demographic.",0.65,1100,310,2025-03-01 08:15:00
+obi,"His emphasis on frugality and efficiency is refreshing.",0.70,1250,350,2025-03-01 09:00:00
+obi,"The Obidient movement is very passionate online.",0.60,1150,290,2025-03-01 10:30:00
+obi,"It's unclear how he would implement all his plans nationally.",-0.50,900,220,2025-03-01 11:15:00
+obi,"He seems to have less political baggage than the others.",0.55,980,270,2025-03-01 12:00:00
+tinubu,"The new ministerial appointments are a mixed bag.",0.10,650,140,2025-03-01 13:30:00
+tinubu,"I hope the economic policies start showing results soon.",0.30,710,160,2025-03-01 14:20:00
+atiku,"Atiku's business background is a strength for the economy.",0.65,890,210,2025-03-01 15:10:00
+atiku,"His age is a topic of discussion for some voters.",-0.45,830,195,2025-03-01 16:30:00
+obi,"Obi's manifesto is quite detailed, which is good.",0.65,1050,300,2025-03-01 17:45:00
+obi,"His party's structure across the country is still weak.",-0.55,870,230,2025-03-01 18:30:00
+atiku,"Atiku promises to engage the diaspora more effectively.",0.55,760,170,2025-03-02 09:00:00
+tinubu,"Electricity supply has been slightly more stable this week.",0.45,690,155,2025-03-02 10:15:00
+obi,"Obi's interview on foreign policy was reasonably good.",0.60,950,250,2025-03-02 11:00:00
+tinubu,"The cost of living is still the biggest challenge for most.",-0.70,1120,320,2025-03-02 12:30:00
+atiku,"Atiku's stance on restructuring is popular in some regions.",0.50,810,185,2025-03-02 13:45:00
+obi,"The LP needs to build more alliances to have a chance.",-0.30,780,200,2025-03-02 14:20:00
+atiku,"Corruption remains an issue that all candidates must address.",-0.20,920,260,2025-03-02 15:00:00
+tinubu,"The government is trying to attract new investments.",0.50,840,180,2025-03-02 16:10:00
+obi,"Obi's focus on production is a good long-term strategy.",0.60,1020,280,2025-03-02 17:30:00
